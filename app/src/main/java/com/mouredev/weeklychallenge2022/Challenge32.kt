@@ -14,3 +14,11 @@ package com.mouredev.weeklychallenge2022
  * - Tienes toda la información sobre los retos semanales en https://retosdeprogramacion.com/semanales2022.
  *
  */
+
+fun main() {
+    val numbers = listOf(153,23,30,4,5,62,151,8)
+
+    val number =  numbers.sortedWith(compareBy{it})
+
+    println(number[numbers.size-2])
+}
