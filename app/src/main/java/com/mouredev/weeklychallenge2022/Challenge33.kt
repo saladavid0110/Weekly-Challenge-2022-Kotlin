@@ -48,6 +48,5 @@ fun sexagenarianCycle(year: Int): String {
     val newYear = (year - 4)
     val element = elements[Math.floorDiv(newYear, 2) % elements.size]
     val animal = animals[newYear % animals.size]
-
     return "Year: $year, Animal: $animal, Element: $element"
 }
