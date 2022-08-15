@@ -21,3 +21,33 @@ package com.mouredev.weeklychallenge2022
  * - Tienes toda la información sobre los retos semanales en https://retosdeprogramacion.com/semanales2022.
  *
  */
+
+
+
+
+fun main() {
+    println(sexagenarianCycle(1980))
+}
+
+fun sexagenarianCycle(year: Int): String {
+    val elements: List<String> = listOf("Wood", "Fire", "Earth", "Metal", "Water")
+    val animals: List<String> = listOf(
+        "Rat",
+        "Ox",
+        "Tiger",
+        "Rabbit",
+        "Dragon",
+        "Snake",
+        "Horse",
+        "Goat",
+        "Monkey",
+        "Rooster",
+        "Dog",
+        "Pig"
+    )
+    val newYear = (year - 4)
+    val element = elements[Math.floorDiv(newYear, 2) % elements.size]
+    val animal = animals[newYear % animals.size]
+
+    return "Year: $year, Animal: $animal, Element: $element"
+}
